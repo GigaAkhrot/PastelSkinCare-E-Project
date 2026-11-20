@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Products | Pastel Skincare🌺</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="icon" type="image/png" href="./1favicon/apple-touch-icon(2).png" sizes="96x96" />
+<!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+   -->
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!--Custom CSS for above bscss -->
+<link href="styles.css" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Playfair Display', serif;
+      background: linear-gradient(180deg, #ffdce2 0%, #ffe0f0 100%);
+    }
+
+    header {
+      background: linear-gradient(90deg, #ffb6c1, #ffc0cb);
+      color: #6d3d6d;
+      padding: 4rem 0;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    h1, h2 {
+      font-weight: bold;
+    }
+
+    header {
+  position: relative;
+  height: 300px; /* check andadjust */
+  color: white;
+  text-align: center;
+  padding: 6rem 2rem;
+  overflow: hidden;
+  z-index: 1;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: slideBackground 15s infinite;
+  z-index: -1;
+  filter: brightness(0.7);
+}
+
+.p{
+  text-align: center;
+  font-weight: 400;
+}
+
+.p2{
+  font-style: italic;
+  font-weight: 550;
+}
+
+@keyframes slideBackground {
+  0% {
+    background-image: url('./image/bg1.png.png');
+  }
+  33% {
+    background-image: url('./image/bg2.png.png');
+  }
+  66% {
+    background-image: url('./image/bg3.png.png');
+  }
+  100% {
+    background-image: url('./image/rose1.png.png');
+  }
+}
+
+/* Enhanced Pastel Hearts Loader */
+#loader-wrapper {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: #fff0f6;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.heart {
+  position: relative;
+  width: 80px;
+  height: 70px;
+  background: pink;
+  transform: rotate(-45deg);
+  animation: pulse 1.5s infinite;
+}
+
+.heart::before, .heart::after {
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 70px;
+  background: pink;
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -40px;
+  left: 0;
+}
+
+.heart::after {
+  top: 0;
+  left: 40px;
+}
+
+@keyframes pulse {
+  0%   { transform: scale(1) rotate(-45deg); opacity: 1; }
+  50%  { transform: scale(1.1) rotate(-45deg); opacity: 0.7; }
+  100% { transform: scale(1) rotate(-45deg); opacity: 1; }
+}
+
+.loader-text {
+  margin-top: 1.5rem;
+  font-size: 1.5rem;
+  color: #d77fa1;
+  font-weight: bold;
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% { opacity: 0.3; }
+  50% { opacity: 1; }
+  100% { opacity: 0.3; }
+}
+
+.fading-flower {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: radial-gradient(circle at center, #ffc0cb 0%, transparent 70%);
+  border-radius: 50%;
+  animation: float 5s infinite ease-in-out;
+  opacity: 0.6;
+}
+
+@keyframes float {
+  0% { transform: translateY(0) scale(1); opacity: 0.6; }
+  50% { transform: translateY(-80px) scale(1.2); opacity: 0.2; }
+  100% { transform: translateY(0) scale(1); opacity: 0.6; }
+}
+
+    
+    button[data-bs-target="#cartSidebar"] {
+      background-color: #f4a2b3;  /* pastel pink */
+      color: white;
+      border: none;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(244, 162, 179, 0.6);
+      transition: background-color 0.3s ease;
+      border-radius: 12px;
+      padding: 0.5rem 1.2rem;
+}
+
+    button[data-bs-target="#cartSidebar"]:hover {
+      background-color: #f18aa5;  /* darkerish pink */
+      color: white;
+}
+
+    .section-title {
+      color: #d77fa1;
+    }
+
+    .btn-pastel {
+      background-color: #e892a2;
+      color: white;
+      border: none;
+    }
+
+    .btn-pastel:hover {
+      background-color: #da7890;
+    }
+
+    .product-card {
+      transition: transform 0.6s ease, opacity 0.6s ease;
+      opacity: 0;
+      transform: translateY(60px);
+    }
+
+    .product-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .card {
+      border-radius: 20px;
+      background: #fff4f7;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    }
+
+    .card img {
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      object-fit: cover;
+      height: 200px;
+    }
+
+    .quantity-controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .quantity-controls button {
+      background-color: #ffc4c4;
+      border: none;
+      padding: 0.3rem 0.8rem;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .offcanvas-body {
+      background: #fff0f5;
+    }
+
+    .navbar {
+      background-color: #ffc5d0;
+    }
+
+    .navbar-brand {
+      color: #d77fa1;
+      font-weight: bold;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .category-buttons {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .category-buttons .btn {
+      margin: 0.5rem;
+    }
+    
+    .text-dirty-pink {
+  color: #d16b86 !important; /* Dirty Pink */
+}
+  </style>
+</head>
+<body>
+    <!-- NAVBAR BOOTSTRAP -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#"><img src="./1favicon/favicon(2).ico" alt=""> Pastel Skincare</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#cartSidebar" aria-controls="cartSidebar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html" onclick="showLoader()">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./AboutUs.html" onclick="showLoader()">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./gallerypage01.html" onclick="showLoader()">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#products" onclick="showLoader()">Products</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="./OrderPage.html">Item List</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="./contactus.html">Contact Us</a>
+          </li>
+          <button class="btn btn-light ms-2" data-bs-toggle="offcanvas" data-bs-target="#cartSidebar" aria-controls="cartSidebar">
+            <i class="bi bi-cart3"></i> Cart
+          </button>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+ <!-- DIV FOR CART -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="cartSidebar">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title">Your Cart</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"><a href="./OrderPage.html"></a></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul id="cartItems" class="list-group mb-3"></ul>
+      <h6>Total: $<span id="totalPrice">0.00</span></h6>
+      <button class="btn btn-pastel mt-3 w-100"><a href="./OrderPage.html"></a> Checkout</button>
+    </div>
+  </div>
+
+ <!-- HEADER -->
+  <header>
+    <h1 class="display-4">Pastel Skincare</h1>
+    <p class="lead">Nurture your skin with the soft touch of pastels</p>
+    <button class="btn btn-pastel mt-3" onclick="scrollToProducts()">View Products</button>
+  </header>
+
+  <!-- DIV -->
+  <div class="container my-5" id="products">
+    <div class="container category-buttons">
+    <button class="btn btn-pastel" onclick="renderProducts('all')">All</button>
+    <button class="btn btn-pastel" onclick="renderProducts('toner')">Toners</button>
+    <button class="btn btn-pastel" onclick="renderProducts('cleanser')">Cleansers</button>
+    <button class="btn btn-pastel" onclick="renderProducts('moisturizer')">Moisturizers</button>
+    <button class="btn btn-pastel" onclick="renderProducts('best')">Best Sellers</button>
+  </div>
+    <div class="row g-4" id="productGrid">
+      <!-- Add More Product cards, switched to java for better visual appeal-->
+    </div>
+  </div>
+
+ <!-- SCRIPT STARTS HERWE -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const productData = [
+      { name: "Rose Toner", price: 12.99, category: "toner", image: "image/rose2.png.png", description: "Hydrates and refreshes your skin with natural rose extract." },
+      { name: "Peach Cleanser", price: 15.99, category: "cleanser", image: "image/gudpeach.png.png" },
+      { name: "Lavender Moisturizer", price: 18.99, category: "moisturizer", image: "image/lave2.png.png" },
+      { name: "Mint Cleanser", price: 14.99, category: "cleanser", image: "image/mint1.png.png" },
+      { name: "Chamomile Toner", price: 11.99, category: "toner", image: "image/CToner2.png.png" },
+      { name: "Vanilla Moisturizer", price: 19.99, category: "moisturizer", image: "image/vanilla2.png.png" }
+      // { name: "Daily Glow Sunscreen", price: 16.99, category: "sunscreen", image: "image/sunscreen1.png.png", description: "Lightweight SPF 50+ protection that leaves your skin glowing, not greasy."}
+    ];
+
+    const productGrid = document.getElementById("productGrid");
+
+    function renderProducts(filter = "all") {
+      productGrid.innerHTML = "";
+      const filtered = filter === "all" ? productData : productData.filter(p => p.category === filter);
+      filtered.forEach(product => {
+        const col = document.createElement("div");
+        col.className = "col-md-4 product-card";
+        col.setAttribute("data-category", product.category);
+        col.innerHTML = `
+          <div class="card">
+            <img src="${product.image}" class="card-img-top" alt="${product.name}">
+            <div class="card-body">
+              <h5 class="card-title">${product.name}</h5>
+              <p class="card-text text-muted">$${product.price.toFixed(2)}</p>
+              <div class="quantity-controls">
+                <button onclick="decrement(this)">-</button>
+                <span>0</span>
+                <button onclick="increment(this)">+</button>
+              </div>
+            </div>
+          </div>`;
+        productGrid.appendChild(col);
+        observer.observe(col);
+      });
+    }
+
+    function filterCategory(category) {
+      renderProducts(category);
+    }
+
+    function scrollToProducts() {
+      document.getElementById('products').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function increment(btn) {
+      const span = btn.previousElementSibling;
+      const card = btn.closest('.card');
+      const title = card.querySelector('.card-title').textContent;
+      const price = parseFloat(card.querySelector('.text-muted').textContent.replace(/[^0-9.]/g, ''));
+
+      let quantity = parseInt(span.textContent) + 1;
+      span.textContent = quantity;
+      updateCart(title, price, quantity);
+    }
+
+    function decrement(btn) {
+      const span = btn.nextElementSibling;
+      const card = btn.closest('.card');
+      const title = card.querySelector('.card-title').textContent;
+      const price = parseFloat(card.querySelector('.text-muted').textContent.replace(/[^0-9.]/g, ''));
+
+      let quantity = parseInt(span.textContent);
+      if (quantity > 0) quantity--;
+      span.textContent = quantity;
+      updateCart(title, price, quantity);
+    }
+
+    const cart = {};
+
+    function updateCart(name, price, qty) {
+      if (qty === 0) {
+        delete cart[name];
+      } else {
+        cart[name] = { price, qty };
+      }
+      renderCart();
+    }
+
+    function renderCart() {
+      const cartItems = document.getElementById('cartItems');
+      cartItems.innerHTML = '';
+      let total = 0;
+      for (const item in cart) {
+        const { price, qty } = cart[item];
+        const li = document.createElement('li');
+        li.className = 'list-group-item d-flex justify-content-between align-items-center';
+        li.innerHTML = `${item} <span>${qty} x $${price.toFixed(2)}</span>`;
+        cartItems.appendChild(li);
+        total += price * qty;
+      }
+      document.getElementById('totalPrice').textContent = total.toFixed(2);
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    renderProducts();
+  </script>
+
+<!-- loader animation add for the other pages too-->
+  <script>
+  function showLoader() {
+    document.getElementById("loader-wrapper").style.display = "flex";}
+   </script>
+
+  <script>
+  window.addEventListener("load", () => {
+    const loader = document.getElementById("loader-wrapper");
+    loader.style.opacity = "0";
+    setTimeout(() => loader.style.display = "none", 700);});
+      </script>
+
+
+<!-- Testimonials Section from ChatGPT for aesthetic purposes ASK SIR -->
+<div class="container my-5">
+  <h2 class="text-center section-title mb-4">What Our Customers Say</h2>
+  <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner text-center">
+      <div class="carousel-item active">
+        <blockquote class="blockquote">
+          <p>"Absolutely love the Rose Toner! My skin feels refreshed and smells amazing."</p>
+          <footer class="blockquote-footer">Emily, <cite title="Source Title">Skincare Enthusiast</cite></footer>
+        </blockquote>
+      </div>
+      <div class="carousel-item">
+        <blockquote class="blockquote">
+          <p>"The Lavender Moisturizer is my nighttime ritual now. Gentle and soothing."</p>
+          <footer class="blockquote-footer">Jasmine, <cite title="Source Title">Beauty Blogger</cite></footer>
+        </blockquote>
+      </div>
+      <div class="carousel-item">
+        <blockquote class="blockquote">
+          <p>"Peach Cleanser is the only product I use now. It's that good!"</p>
+          <footer class="blockquote-footer">Liam, <cite title="Source Title">Verified Buyer</cite></footer>
+        </blockquote>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+</div>
+
+<!-- Footer -->
+ <footer>
+    <div class="container my-5">
+  <div class="p-5 text-center rounded" style="background-color: #ffe4e1;">
+    <h2 class="section-title">Stay Glowing!</h2>
+    <p class="mb-4">Subscribe to get updates on new arrivals and skincare tips.</p>
+    <form class="row g-3 justify-content-center">
+      <div class="col-md-6">
+        <input type="email" class="form-control" placeholder="Enter your email" required>
+      </div>
+      <div class="col-auto">
+        <button type="submit" class="btn btn-pastel">Subscribe</button>
+      </div>
+    </form>
+
+    <div class="container text-center text-md-start">
+      <div class="row text-center text-md-start">
+    
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold text-danger"><img src="./1favicon/favicon(1).ico" alt=""> Pastel Skincare</h5>
+          <p class="p2">Luxury skincare & spa services crafted just for you. Feel the glow, every day.</p>
+        </div>
+  
+        <!-- Quick Links -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold text-danger">Quick Links</h5>
+          <p><a href="./index.html" class="text-dirty-pink text-decoration-none">Home</a></p>
+          <p><a href="./AboutUs.html" class="text-dirty-pink text-decoration-none">Services</a></p>
+          <p><a href="./gallerypage01.html" class="text-dirty-pink text-decoration-none">Gallery</a></p>
+          <p><a href="./feedback.html" class="text-dirty-pink text-decoration-none">Feedback</a></p>
+        </div>
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold text-danger">Contact</h5>
+          <p><i class="bi bi-house-door-fill"></i> Karachi, Pakistan</p>
+          <p><i class="bi bi-envelope-fill"></i> mmbeauty@example.com</p>
+          <p><i class="bi bi-telephone-fill"></i> +92 300 1234567</p>
+        </div>
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold text-danger">Follow us</h5>
+          <a href="https://www.facebook.com/?_rdr" class="text-dirty-pink me-4 fs-5"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/" class="text-dirty-pink me-4 fs-5"><i class="bi bi-instagram"></i></a>
+          <a href="https://x.com/i/flow/login?redirect_after_login=%2Fexplore" class="text-dirty-pink me-4 fs-5"><i class="bi bi-twitter"></i></a>
+          </div>
+  
+      <div><br>
+        <p class="p">&copy; 2025 Pastel Skincare – Lovingly crafted with care and pastel vibes.</p>
+    </div>
+  </div>
+</div>
+ </footer>
+
+ <!-- Loader -->
+<div id="loader-wrapper">
+  <div class="heart"></div>
+  <div class="loader-text">Loading Pastel Magic...</div>
+  <div class="fading-flower" style="top: 20%; left: 25%; animation-delay: 1s;"></div>
+  <div class="fading-flower" style="top: 40%; left: 70%; animation-delay: 2s;"></div>
+  <div class="fading-flower" style="top: 60%; left: 50%; animation-delay: 3s;"></div>
+</div>
+
+</body>
+</html>

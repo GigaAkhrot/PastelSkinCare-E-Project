@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Pastel Skincare🌺</title>
+    <link rel="icon" type="image/png" href="./1favicon/apple-touch-icon(2).png" sizes="96x96" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="login.css">
+</head>
+<body>
+     
+  <div class="container">
+    <h2>Login</h2>
+    <form>
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit">Login</button>
+    </form>
+</div>
+
+<script>
+    document.querySelector("form").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const email = document.getElementById("email").value.trim();
+        const password = document.getElementById("password").value.trim();
+
+        if (email === "" || !email.includes("@") || !email.includes(".")) {
+            alert("Please enter a valid Email Address.");
+            return;
+        }
+
+        if (password.length < 6) {
+            alert("Password must be at least 6 characters.");
+            return;
+        }
+
+        // Redirect to homepage or dashboard after successful login
+        window.location.href = "index2.html";
+    });
+</script>
+
+
+<footer>
+  <p>&copy; 2025 Pastel Skincare – Lovingly crafted with care and pastel vibes.</p>
+  <a href="./index.html">← Back to Home</a>
+</footer>
+  
+    
+</html>
+<!-- <body>
+     
+ <h2>Login</h2>
+  <form id="loginForm">
+    <label for="name">Full Name</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email Address</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" required>
+
+    <button type="submit">Login</button>
+  </form>
+<footer>
+    <p>&copy; 2025 Pastel Skincare – Lovingly crafted with care and pastel vibes.</p>
+    <a href="./index.html">← Back to Home</a>
+  </footer>
+    <script src="login.js"></script>
+</body>
+</html> -->

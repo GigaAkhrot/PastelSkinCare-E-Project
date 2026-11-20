@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Pastel Skincare🌺</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+    <!-- added by urs truly, Aala -->
+  <link rel="icon" type="image/png" href="./1favicon/apple-touch-icon(2).png" sizes="96x96" />
+  <style>
+    body {
+      background-color: #fff0f5;
+      /* font-family: 'Segoe UI', sans-serif; */
+      font-family: 'Playfair Display', serif;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body>
+  
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <title>Home | Pastel Skincare🌺</title>
+      <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+      <style>
+
+        body {
+      font-family: 'Playfair Display', serif;
+    }
+        .card-container {
+  display: flex;
+  gap: 20px; 
+  overflow-x:left-right ; 
+  padding: 10px;
+}
+
+.card {
+  width: 250px;
+  border: 1px solid #fad5e6;
+  border-radius: 5px;
+  padding: 10px;
+  flex-shrink: 0;
+  box-shadow: 10px 10px 5px rgb(230, 173, 200);
+  background-color: #fad5e6;
+}
+.card-img-top {
+  height: 200px;          
+  object-fit: cover;      
+}
+
+.btn {
+  background: linear-gradient(135deg, #ff69b4, #ff1493);
+  color: white;
+  border: palevioletred;
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(255, 20, 147, 0.3);
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #ff1493, #c71585);
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(199, 21, 133, 0.4);
+}
+
+/* added by urs truly, Aala */
+.card :hover {
+  cursor: pointer;
+  /* height: 240px;
+  width: 270px;
+  margin: 2;
+  padding: 4; */
+}
+.custom-shadow {
+  box-shadow: 0 8px 20px hsla(332, 100%, 89%, 0.918);
+  transition: box-shadow 0.3s ease-in-out;
+}
+.custom-shadow:hover {
+  box-shadow: 0 12px 28px hsla(332, 100%, 89%, 0.918);
+}
+
+
+#loader-wrapper {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: #fff0f6;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.heart {
+  position: relative;
+  width: 80px;
+  height: 70px;
+  background: pink;
+  transform: rotate(-45deg);
+  animation: pulse 1.5s infinite;
+}
+
+.heart::before, .heart::after {
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 70px;
+  background: pink;
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -40px;
+  left: 0;
+}
+
+.heart::after {
+  top: 0;
+  left: 40px;
+}
+
+@keyframes pulse {
+  0%   { transform: scale(1) rotate(-45deg); opacity: 1; }
+  50%  { transform: scale(1.1) rotate(-45deg); opacity: 0.7; }
+  100% { transform: scale(1) rotate(-45deg); opacity: 1; }
+}
+
+.loader-text {
+  margin-top: 1.5rem;
+  font-size: 1.5rem;
+  color: #d77fa1;
+  font-weight: bold;
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% { opacity: 0.3; }
+  50% { opacity: 1; }
+  100% { opacity: 0.3; }
+}
+
+.fading-flower {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: radial-gradient(circle at center, #ffc0cb 0%, transparent 70%);
+  border-radius: 50%;
+  animation: float 5s infinite ease-in-out;
+  opacity: 0.6;
+}
+
+.vb{
+  justify-content: end;
+  align-items: end;
+}
+      </style>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body>
+    <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+      <div class="container-fluid">
+        <a class="navbar-brand fw-bold .text-sucess " href="#"><img src="./1favicon/favicon(2).ico" alt=""> Pastel Skincare</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#vipNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="vipNavbar">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./aaaaaaaaaaaan.html">Order Now</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./gallerypage01.html">Gallery</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#">About Us</a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="./AboutUs.html">About Us</a></li>
+                <li><a class="dropdown-item" href="#">Services</a></li>
+                <li><a class="dropdown-item" href="#">Skin Serums</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./OrderPage.html">Cart</a>
+            </li>
+            <div><button type="button" class="btn btn-primary"><a href="./login.html"></a> Log In</button></div>
+          <span>  <div><button type="button" class="btn btn-primary"><a href="./registeration_form.html"></a> Sign Up</button></div></span>
+          </ul>
+        </div>
+      </div>
+    </nav> -->
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #ffe4ec;">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold text-danger" href="#">
+      <img src="./1favicon/favicon(2).ico" alt="Logo" style="height: 30px;"> Pastel Skincare
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav gap-2">
+        <li class="nav-item"><a class="nav-link text-dark" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link text-dark" href="./AboutUs.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link text-dark" href="./gallerypage.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link text-dark" href="./product.html">Products</a></li>
+        <li class="nav-item"><a class="nav-link text-dark" href="./contactus.html">Contact Us</a></li>
+        <li class="nav-item"><a class="nav-link text-dark" href="./OrderPage.html">Item List</a></li>
+        <li class="nav-item">
+          <a href="./registeration_form.html" class="btn btn-outline-danger btn-sm rounded-pill">Sign Up</a>
+        </li>
+        <li class="nav-item">
+          <a href="./login.html" class="btn btn-danger btn-sm rounded-pill">Log In</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+<section class="text-center text-white d-flex align-items-center justify-content-center" style="
+background: url(./image/ChatGPT\ Image\ May\ 6\,\ 2025\,\ 12_22_54\ PM.png) no-repeat center center;
+background-size: cover;
+height: 90vh;
+position: relative;
+">
+<div class=" container-fluid -bg-dark bg-opacity-50 p-5 rounded">
+  <h1 class="display-4 fw-bold">🌺Welcome to Pastel Skincare🌺</h1>
+  <p class="lead" style="font-size: 30px;"><i>Luxury skincare & spa services crafted just for you.</i></p>
+  <a href="./gallerypage.html" class="btn btn-light btn-lg mt-3">Book Now</a>
+</div>
+</section>
+<div class="d-flex flex-row flex-wrap gap-3 justify-content-center p-4">
+    <div class="card" style="width: 18rem;">  <span class="badge bg-danger position-absolute top-0 start-0 m-2">20% OFF</span>
+
+      <img src="./image/ton.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Toner</h5>
+        <p class="card-text">HydraGlow Face Cream
+     Intense hydration + glow – now 20% OFF!</p>
+        <a href="./product.html" class="btn btn-primary">Order Now</a>
+      </div>
+    </div>
+  
+    <div class="card" style="width: 18rem;">
+        <span class="badge bg-danger position-absolute top-0 start-0 m-2">20% OFF</span>
+
+      <img src="./image/sun1.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">RARE BEAUTY SunScreen</h5>
+        <p class="card-text">RareBeauty Radiance
+         Celebrity favorite! Grab yours with 20% OFF</p>
+        <a href="./product.html" class="btn btn-primary">Order Now</a>
+      </div>
+    </div>
+  
+    <div class="card" style="width: 18rem;">
+        <span class="badge bg-danger position-absolute top-0 start-0 m-2">20% OFF</span>
+
+      <img src="./image/mos.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">LOTIONS</h5>
+        <p class="card-text">Deep Nourish Hair Oil
+       Repair & shine for both silky and culrs – Flat 20% OFF</p>
+        <a href="./product.html" class="btn btn-primary">Order Now</a>
+      </div>
+    </div>
+  
+    <div class="card" style="width: 18rem;">
+        <span class="badge bg-danger position-absolute top-0 start-0 m-2">20% OFF</span>
+
+      <img src="./image/serum2.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">SERUMS</h5>
+        <p class="card-text">GlowBoost Vitamin C Serum
+         Brighten your skin – now at 20% OFF!</p>
+        <a href="./aaaaaaaaaaaan.html" class="btn btn-primary">Order Now</a>
+      </div>
+    </div>
+  </div>
+<!-- <div class="vb"><button type="button" class="btn btn-primary"><a href="./aaaaaaaaaaaan.html"></a> Veiw More</button></div></span> -->
+  
+  <footer class="pt-5 pb-4" style="background-color: #ffe4ec;">
+  <div class="container text-center text-md-start">
+    <div class="row">
+      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+        <h5 class="text-uppercase mb-4 font-weight-bold text-danger">
+          <img src="./1favicon/favicon(1).ico" alt="Icon" style="height: 20px;"> Pastel Skincare
+        </h5>
+        <p class="text-muted">Luxury skincare & spa services crafted just for you. Feel the glow, every day.</p>
+      </div>
+
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+        <h5 class="text-uppercase mb-4 font-weight-bold text-danger">Quick Links</h5>
+        <p><a href="./index.html" class="text-dark text-decoration-none">Home</a></p>
+        <p><a href="./AboutUs.html" class="text-dark text-decoration-none">Services</a></p>
+        <p><a href="./gallerypage.html" class="text-dark text-decoration-none">Gallery</a></p>
+        <p><a href="./feedback.html" class="text-dark text-decoration-none">Feedback</a></p>
+      </div>
+
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+        <h5 class="text-uppercase mb-4 font-weight-bold text-danger">Contact</h5>
+        <p class="text-muted"><i class="bi bi-house-door-fill"></i> Karachi, Pakistan</p>
+        <p class="text-muted"><i class="bi bi-envelope-fill"></i> mmbeauty@example.com</p>
+        <p class="text-muted"><i class="bi bi-telephone-fill"></i> +92 300 1234567</p>
+      </div>
+
+      <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mt-3">
+        <h5 class="text-uppercase mb-4 font-weight-bold text-danger">Follow us</h5>
+        <a href="https://www.facebook.com/?_rdr" class="text-dark me-4 fs-5"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/" class="text-dark me-4 fs-5"><i class="bi bi-instagram"></i></a>
+        <a href="https://x.com/i/flow/login?redirect_after_login=%2Fexplore" class="text-dark me-4 fs-5"><i class="bi bi-twitter"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<footer class="text-center py-3" style="background-color: #ffd6e6;">
+  <p class="mb-0 text-muted">&copy; 2025 Pastel Skincare. All rights reserved.</p>
+</footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- added by urs truly, Aala -->
+     <div id="loader-wrapper">
+  <div class="heart"></div>
+  <div class="loader-text">Loading Pastel Magic...</div>
+  <div class="fading-flower" style="top: 20%; left: 25%; animation-delay: 1s;"></div>
+  <div class="fading-flower" style="top: 40%; left: 70%; animation-delay: 2s;"></div>
+  <div class="fading-flower" style="top: 60%; left: 50%; animation-delay: 3s;"></div>
+</div>
+     <script>
+  function showLoader() {
+    document.getElementById("loader-wrapper").style.display = "flex";
+  }
+</script>
+  <script>
+  window.addEventListener("load", () => {
+    const loader = document.getElementById("loader-wrapper");
+    loader.style.opacity = "0";
+    setTimeout(() => loader.style.display = "none", 700);
+  });
+</script>
+</body>
+</html>

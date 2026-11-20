@@ -1,0 +1,110 @@
+body {
+  font-family: 'Playfair Display', serif;
+  background-color: pink;
+}
+
+.card {
+  border-radius: 12px;
+  border: none;
+}
+
+h2 {
+  font-weight: 700;
+  color:  rgb(216, 112, 164);
+}
+.btn-pastel {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  background-color: #ffc5d0;   
+  color: #7a3f58;              
+  border: none;
+  border-radius: 12px;        
+  font-size: 0.875rem;        
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn-pastel:hover {
+  background-color: #ff9fb3; 
+  color: white;
+}
+
+.containerr {
+      background: linear-gradient(to right, #ffe4ec, #fbeaff);
+      padding: 4rem 0;
+      text-align: center;
+      border-radius: 3rem 3rem 0 0;
+      box-shadow: 0 4px 20px rgba(23, 13, 15, 0.4);
+    }
+
+    .text-dirty-pink {
+  color: #d16b86 !important;}
+
+  .btn-pastel {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #ffc5d0;   
+  color: #7a3f58;             
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn-pastel:hover {
+  background-color: #ff9fb3;   
+  color: white;
+}
+
+.text-pink {
+  color: palevioletred;
+}
+
+.pastel-select {
+  border-radius: 12px;
+  border: 2px solid #ffc5d0;       
+  background-color: #fff0f5;        
+  color: #7a3f58;                   
+  transition: border-color 0.3s ease;
+}
+
+.pastel-select:focus {
+  border-color: #ff9fb3;        
+  box-shadow: 0 0 5px rgba(255, 182, 193, 0.5);
+  outline: none;
+}
+
+/* Theme colors */
+.text-success {
+  color: palevioletred !important;
+}
+
+.card {
+  background-color: #fff0f5; 
+  border: 1px solid #ffc5d0;
+  border-radius: 16px;
+}
+
+.card h5,
+.card p,
+label {
+  color: #7a3f58;
+}
+
+.form-control {
+  border-radius: 10px;
+  border: 2px solid #ffc5d0;
+  background-color: #fffafc;
+  transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #ff9fb3;
+  box-shadow: 0 0 5px rgba(255, 182, 193, 0.4);
+  outline: none;
+}

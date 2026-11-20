@@ -1,0 +1,39 @@
+body{
+    background-color:palevioletred;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.feedback-card{
+    max-width: 500px;
+    padding: 20px; 
+    border-radius: 12px;
+    background-color: white;
+    text-align: center;
+}
+.myicon{
+    font-size: 50px;
+    padding: 0.5rem;
+}
+.star-rating .fa-star {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #ddd;
+  }
+  .star-rating .fa-star.checked {
+    color: gold;
+  }
+  .btn-submit{
+    background-color: white;
+    color:black;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+  .btn-submit:hover{
+    background-color:plum ;
+  }
